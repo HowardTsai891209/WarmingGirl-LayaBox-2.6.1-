@@ -1,0 +1,4 @@
+{
+  "code": "export default class HealthBar extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    test(target, damage) {\r\n        Laya.timer.loop(1000, this, function () {\r\n            console.log(target.value);\r\n            target.value -= damage;\r\n        });\r\n    }\r\n}\r\n",
+  "references": []
+}

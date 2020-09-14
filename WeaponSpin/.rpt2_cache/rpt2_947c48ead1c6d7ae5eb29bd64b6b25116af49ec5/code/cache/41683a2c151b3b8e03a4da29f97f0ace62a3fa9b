@@ -1,0 +1,4 @@
+{
+  "code": "export default class Point extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    decideWeapon(rotation) {\r\n        rotation %= 360;\r\n        if (rotation >= 150 && rotation <= 210) {\r\n            console.log(1);\r\n            return;\r\n        }\r\n        else if (rotation >= 90 && rotation <= 150) {\r\n            console.log(2);\r\n            return;\r\n        }\r\n        else if (rotation >= 30 && rotation <= 90) {\r\n            console.log(3);\r\n            return;\r\n        }\r\n        else if (rotation >= 330 || rotation <= 30) {\r\n            console.log(4);\r\n            return;\r\n        }\r\n        else if (rotation >= 270 && rotation <= 330) {\r\n            console.log(5);\r\n            return;\r\n        }\r\n        else if (rotation >= 210 && rotation <= 270) {\r\n            console.log(6);\r\n            return;\r\n        }\r\n    }\r\n}\r\n",
+  "references": []
+}

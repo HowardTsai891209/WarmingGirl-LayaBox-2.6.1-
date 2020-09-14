@@ -1,0 +1,151 @@
+D .
+D comp
+P 9401CC40 blank.png
+P B03390E5 btn_close.png
+P 1F3929EA button.png
+P 3C493DD4 check_circle.png
+P 6CC6DF97 checkbox.png
+P FB94CCF2 clip_num.png
+P F7B6B7D7 clip_selectBox.png
+P 755271AE clip_tree_arrow.png
+P 859FD34C clip_tree_folder.png
+P A0E3B8F9 combobox.png
+P D566AE8B fontClip.png
+P 38AB8F3F fontClip_num.png
+P 9EDA959E hscroll$bar.png
+P 1AB768D4 hscroll$down.png
+P 685261D3 hscroll$up.png
+P 274B8076 hscroll.png
+P E466EB1C hslider$bar.png
+P C4BECA54 hslider.png
+P 5EDC128C html.png
+P ACFFCCCF image.png
+P D12221A9 img_bg.png
+P FCD04607 img_bg2.png
+P 23FB4D29 img_bg3.png
+P 5FD17798 img_bg4.png
+P 2BE22124 img_bg5.png
+P BA28BD65 img_blank.png
+P 5EDC128C label.png
+P 5EDC128C linkbutton.png
+P 9E4DD730 progress$bar.png
+P 3FD78E12 progress.png
+P BF898D6A radio.png
+P BF898D6A radiogroup.png
+P 8CFD9D35 tab.png
+P BDA71F88 textarea.png
+P BDA71F88 textinput.png
+P 52107B89 vscroll$bar.png
+P E26B933E vscroll$down.png
+P B9680947 vscroll$up.png
+P 7E990267 vscroll.png
+P E466EB1C vslider$bar.png
+P 2BFF7046 vslider.png
+D Dialog
+R F39A7CBC !整體效果.jpg
+P 2431B650 Audio.png
+P 5224D927 Audio接觸.png
+P 2D2AE852 Audio選.png
+P 52A42C3C Auto 選取.png
+P 81A08AA9 Auto.png
+P 0A1855CD config 選取.png
+P 20A3959C config.png
+P 261CC1D2 hide 選取.png
+P 3B109FEE hide.png
+P 14BDEDBD load(1).png
+P BF8B4983 Load.png
+P C5602CDE load接觸.png
+P 4D5CDF57 load選取.png
+R 32231412 Message.png
+P 2867D01E save 接觸.png
+P A4A5BDA7 save 選取.png
+P 8CFF6386 save.png
+P EB210D77 skip 選取.png
+P 6E57E4BB skip.png
+P CD254FF8 story 選取.png
+P 6792D7F3 story.png
+R 0FBFA472 對話框.ai
+R 1BB56E1B 對話框.psd
+P 75605522 成就 接觸.png
+P 221C4695 成就 選.png
+P E08C22D1 成就.png
+P 9E054AA6 按鈕(接觸).png
+P 7679EA1C 按鈕(未選).png
+P 4ACBF694 按鈕(未選)_修正.png
+P BE52FE1B 按鈕(選擇).png
+D face
+D res
+R 3BCA0E87 test.csv
+R EA99E5FB test.xlsx
+D face/Ch
+S D1200DE8 Ch_a1001.png
+S C53DEA3D Ch_a1002.png
+R 405EA532 Ch_a1003.png
+S C6CE2F7F Ch_a1004.png
+R A47B0742 Ch_a1005.png
+R B0CCAC8A Ch_a1007.png
+R 8EFFAA89 Ch_a1009.png
+R 1C2F0EE3 Ch_a1014.png
+D face/Gu
+S 02382774 Gu_a1001.png
+S F5854866 Gu_a1002.png
+R 2E121C99 Gu_a1003.png
+S A18CA294 Gu_a1004.png
+R D1915176 Gu_a1005.png
+R 34238AED Gu_a1006.png
+R 999B7509 Gu_a1009.png
+R 4C1590E5 Gu_a1017.png
+D face/Guo
+R 7DAD546B Guo_a1001.png
+S 4B8A7CDD Guo_a1002.png
+S 568497EC Guo_a1003.png
+S 6850C070 Guo_a1004.png
+R EA8584C5 Guo_a1005.png
+S 22B196E2 Guo_a1008.png
+R 1B385A42 Guo_a1010.png
+R D50A34B1 Guo_a1013.png
+D face/H
+S 31E4C9A9 H_a1001.png
+S CCF627E7 H_a1002.png
+R 5983A12D H_a1003.png
+R 598ADDED H_a1004.png
+S CB4276BE H_a1005.png
+R 1AE1983D H_a1006.png
+R FCB265DD H_a1008.png
+R AAF30583 H_a1010.png
+D face/Wa
+S 87F826C5 Wa_a1001.png
+S D748E31C Wa_a1002.png
+R 23DB7601 Wa_a1003.png
+S 8803EBCB Wa_a1004.png
+R E1DF8DD8 Wa_a1005.png
+R F0BCC44F Wa_a1008.png
+R BCFBE784 Wa_a1010.png
+R B36B2C9F Wa_a1015.png
+D face/Wus
+S 0D4C6010 Wus_a1001.png
+S 909EFB23 Wus_a1002.png
+R 2D3B14D0 Wus_a1003.png
+S ECCF1690 Wus_a1004.png
+R 5931BD32 Wus_a1005.png
+R 82056BC9 Wus_a1006.png
+R 65669DF4 Wus_a1008.png
+R B3B0A378 Wus_a1010.png
+D face/Zh
+S A16CD830 Zh_a1001.png
+S 7604278E Zh_a1002.png
+R 98F7173D Zh_a1003.png
+S 43153913 Zh_a1004.png
+R 1B2A11AE Zh_a1005.png
+R 2B93FF51 Zh_a1006.png
+R 06106F38 Zh_a1007.png
+R 171B44AB Zh_a1011.png
+D face/Zho
+S 71B31F65 Zho_a1001.png
+S 4BB4F889 Zho_a1002.png
+R 9D0A40CB Zho_a1003.png
+S A8F56872 Zho_a1004.png
+R 51ADEBCD Zho_a1005.png
+R 87556F15 Zho_a1007.png
+R 12033478 Zho_a1008.png
+R A12A8C7C Zho_a1009.png

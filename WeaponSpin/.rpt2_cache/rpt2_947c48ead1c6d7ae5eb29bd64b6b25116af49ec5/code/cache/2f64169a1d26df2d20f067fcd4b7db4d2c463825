@@ -1,0 +1,7 @@
+{
+  "code": "import Spin from \"./Scripts/Spin\";\r\nimport Point from \"./Scripts/Point\";\r\nexport default class GameConfig {\r\n    constructor() {\r\n    }\r\n    static init() {\r\n        var reg = Laya.ClassUtils.regClass;\r\n        reg(\"Scripts/Spin.ts\", Spin);\r\n        reg(\"Scripts/Point.ts\", Point);\r\n    }\r\n}\r\nGameConfig.width = 1920;\r\nGameConfig.height = 1080;\r\nGameConfig.scaleMode = \"exactfit\";\r\nGameConfig.screenMode = \"none\";\r\nGameConfig.alignV = \"middle\";\r\nGameConfig.alignH = \"center\";\r\nGameConfig.startScene = \"WeaponSpin.scene\";\r\nGameConfig.sceneRoot = \"\";\r\nGameConfig.debug = false;\r\nGameConfig.stat = false;\r\nGameConfig.physicsDebug = false;\r\nGameConfig.exportSceneToJson = true;\r\nGameConfig.init();\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/WeaponSpin/src/Scripts/Spin.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/WeaponSpin/src/Scripts/Point.ts"
+  ]
+}

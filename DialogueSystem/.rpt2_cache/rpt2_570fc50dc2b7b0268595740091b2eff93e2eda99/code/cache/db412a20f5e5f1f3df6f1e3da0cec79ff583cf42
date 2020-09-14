@@ -1,0 +1,6 @@
+{
+  "code": "import DiaLab from \"./Diolog\";\r\nexport default class ButtonObj extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    btnClick() {\r\n        DiaLab.instance.Diolog.on(Laya.Event.CLICK, DiaLab.instance, DiaLab.instance.ClickFn);\r\n        DiaLab.instance.Btn1.visible = false;\r\n        DiaLab.instance.Btn2.visible = false;\r\n        DiaLab.instance.Btn3.visible = false;\r\n    }\r\n    selectionJump() {\r\n        var selJump = DiaLab.instance.comNum;\r\n        while (DiaLab.instance.story[selJump] !== DiaLab.instance.story[DiaLab.instance.selNum]) {\r\n            selJump += DiaLab.instance.findNext;\r\n        }\r\n        if (DiaLab.instance.story[selJump] == DiaLab.instance.story[DiaLab.instance.selNum]) {\r\n            DiaLab.instance.comNum = selJump;\r\n            DiaLab.instance.chaNum = selJump + 2;\r\n            DiaLab.instance.line = selJump + 3;\r\n            DiaLab.instance.faceNum = selJump + 4;\r\n            DiaLab.instance.ClickFn();\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Diolog.ts"
+  ]
+}

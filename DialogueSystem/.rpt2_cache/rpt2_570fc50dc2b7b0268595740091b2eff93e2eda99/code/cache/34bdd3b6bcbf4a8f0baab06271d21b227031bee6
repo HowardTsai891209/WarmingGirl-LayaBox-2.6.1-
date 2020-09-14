@@ -1,0 +1,8 @@
+{
+  "code": "import DiaLab from \"./Diolog\";\r\nimport commandReader from \"./commandReader\";\r\nimport faceReader from \"./FaceReader\";\r\nexport default class Reader extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n        this.storyPath = \"../laya/assets/res/test.csv\";\r\n    }\r\n    onAwake() {\r\n        this.comReader = this.owner.getComponent(commandReader);\r\n        this.faReader = this.owner.getComponent(faceReader);\r\n    }\r\n    read(Num) {\r\n        Laya.loader.load(this.storyPath, new Laya.Handler(this, (e) => {\r\n            let text = e.split(\",\");\r\n            this.comReader.readCom(text);\r\n            this.faReader.readFace(text);\r\n            DiaLab.instance.nameCase(text[Num]);\r\n            if (DiaLab.instance.onlyOnce)\r\n                return;\r\n            console.log(text);\r\n            DiaLab.instance.story.length = 0;\r\n            DiaLab.instance.story = DiaLab.instance.story.concat(e.split(\",\"));\r\n        }));\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Diolog.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/commandReader.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/FaceReader.ts"
+  ]
+}

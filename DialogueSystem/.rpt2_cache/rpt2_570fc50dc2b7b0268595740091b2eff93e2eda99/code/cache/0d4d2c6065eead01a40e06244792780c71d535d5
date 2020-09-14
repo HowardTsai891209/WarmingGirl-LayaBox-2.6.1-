@@ -1,0 +1,13 @@
+{
+  "code": "import Diolog from \"./Scripts/Diolog\";\r\nimport Reader from \"./Scripts/Reader\";\r\nimport FaceReader from \"./Scripts/FaceReader\";\r\nimport commandReader from \"./Scripts/commandReader\";\r\nimport ButtonObject from \"./Scripts/ButtonObject\";\r\nimport Button1 from \"./Scripts/Button1\";\r\nimport Button2 from \"./Scripts/Button2\";\r\nimport Button3 from \"./Scripts/Button3\";\r\nexport default class GameConfig {\r\n    constructor() {\r\n    }\r\n    static init() {\r\n        var reg = Laya.ClassUtils.regClass;\r\n        reg(\"Scripts/Diolog.ts\", Diolog);\r\n        reg(\"Scripts/Reader.ts\", Reader);\r\n        reg(\"Scripts/FaceReader.ts\", FaceReader);\r\n        reg(\"Scripts/commandReader.ts\", commandReader);\r\n        reg(\"Scripts/ButtonObject.ts\", ButtonObject);\r\n        reg(\"Scripts/Button1.ts\", Button1);\r\n        reg(\"Scripts/Button2.ts\", Button2);\r\n        reg(\"Scripts/Button3.ts\", Button3);\r\n    }\r\n}\r\nGameConfig.width = 1920;\r\nGameConfig.height = 1080;\r\nGameConfig.scaleMode = \"exactfit\";\r\nGameConfig.screenMode = \"none\";\r\nGameConfig.alignV = \"middle\";\r\nGameConfig.alignH = \"center\";\r\nGameConfig.startScene = \"Msg.scene\";\r\nGameConfig.sceneRoot = \"\";\r\nGameConfig.debug = false;\r\nGameConfig.stat = false;\r\nGameConfig.physicsDebug = false;\r\nGameConfig.exportSceneToJson = true;\r\nGameConfig.init();\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Diolog.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Reader.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/FaceReader.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/commandReader.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/ButtonObject.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Button1.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Button2.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Button3.ts"
+  ]
+}

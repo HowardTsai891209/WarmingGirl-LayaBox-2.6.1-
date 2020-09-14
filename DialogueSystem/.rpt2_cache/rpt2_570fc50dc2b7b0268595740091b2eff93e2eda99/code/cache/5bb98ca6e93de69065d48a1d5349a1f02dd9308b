@@ -1,0 +1,7 @@
+{
+  "code": "import DiaLab from \"./Diolog\";\r\nimport ButtonObj from \"./ButtonObject\";\r\nexport default class Button1 extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        this.btnObj = this.owner.getComponent(ButtonObj);\r\n    }\r\n    onEnable() {\r\n        let button = this.owner;\r\n        button.on(Laya.Event.CLICK, this, () => {\r\n            DiaLab.instance.Btn1.skin = \"Dialog/按鈕(選擇).png\";\r\n            this.btnObj.btnClick();\r\n            this.btnObj.selectionJump();\r\n        });\r\n        button.on(Laya.Event.MOUSE_OVER, this, () => {\r\n            DiaLab.instance.Btn1.skin = \"Dialog/按鈕(接觸).png\";\r\n        });\r\n        button.on(Laya.Event.MOUSE_OUT, this, () => {\r\n            DiaLab.instance.Btn1.skin = \"Dialog/按鈕(未選)_修正.png\";\r\n        });\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Diolog.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/ButtonObject.ts"
+  ]
+}

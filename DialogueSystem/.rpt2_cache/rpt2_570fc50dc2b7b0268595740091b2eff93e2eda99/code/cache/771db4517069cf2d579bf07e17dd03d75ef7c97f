@@ -1,0 +1,6 @@
+{
+  "code": "import DiaLab from \"./Diolog\";\r\nexport default class faceReader extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    readFace(face) {\r\n        if (face[DiaLab.instance.chaNum] == \"吳俞恆\") {\r\n            switch (face[DiaLab.instance.faceNum]) {\r\n                case \"大哭\":\r\n                    DiaLab.instance.Face.skin = \"face/Zh/Zh_a1003.png\";\r\n                    break;\r\n                case \"大笑\":\r\n                    DiaLab.instance.Face.skin = \"face/Zh/Zh_a1005.png\";\r\n                    break;\r\n            }\r\n        }\r\n        else if (face[DiaLab.instance.chaNum] == \"少女\") {\r\n            switch (face[DiaLab.instance.faceNum]) {\r\n                case \"大哭\":\r\n                    DiaLab.instance.Face.skin = \"face/Gu/Gu_a1003.png\";\r\n                    break;\r\n                case \"大笑\":\r\n                    DiaLab.instance.Face.skin = \"face/Gu/Gu_a1005.png\";\r\n                    break;\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/DialogueSystem/src/Scripts/Diolog.ts"
+  ]
+}

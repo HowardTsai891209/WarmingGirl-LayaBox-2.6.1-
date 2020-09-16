@@ -7,6 +7,7 @@ export default class Reader extends Laya.Script{
     private comReader: commandReader;
     private faReader: faceReader;
     private storyPath: string = "../laya/assets/res/test.csv";
+    public preload : boolean = false;
     constructor() {
         super();
     }
@@ -25,6 +26,7 @@ export default class Reader extends Laya.Script{
             if (DiaLab.instance.onlyOnce) return;
             DiaLab.instance.story.length = 0;
             DiaLab.instance.story = DiaLab.instance.story.concat(e.split(","));
+            this.preload = true;
         }));
     }
 }

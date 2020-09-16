@@ -120,6 +120,7 @@
         constructor() {
             super();
             this.storyPath = "../laya/assets/res/test.csv";
+            this.preload = false;
         }
         onAwake() {
             this.comReader = this.owner.getComponent(commandReader);
@@ -133,9 +134,9 @@
                 DiaLab.instance.nameCase(text[Num]);
                 if (DiaLab.instance.onlyOnce)
                     return;
-                console.log(text);
                 DiaLab.instance.story.length = 0;
                 DiaLab.instance.story = DiaLab.instance.story.concat(e.split(","));
+                this.preload = true;
             }));
         }
     }
@@ -173,7 +174,7 @@
         ShowWords() {
             this.reader.read(this.chaNum);
             this.showWord = setInterval(() => {
-                if (this.story[this.word] === undefined)
+                if (!this.reader.preload)
                     return;
                 this.splitted = this.story[this.line][this.word];
                 if (this.splitted == undefined)

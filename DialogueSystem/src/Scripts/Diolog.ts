@@ -59,7 +59,7 @@ export default class DiaLab extends Laya.Scene{
     ShowWords(): void {//讓文本一字一字出現
         this.reader.read(this.chaNum);
         this.showWord = setInterval(() => {
-            // if(this.story[this.line][this.word] === undefined) return;
+            if(!this.reader.preload) return;
             this.splitted = this.story[this.line][this.word];//把文本拆開
             if (this.splitted == undefined) return; //運行到最後一字時 避免出錯  
             this.Diolog.text += this.splitted;

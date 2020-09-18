@@ -106,11 +106,11 @@ export default class DiaLab extends Laya.Scene{
   
     nameCase(name?: string): void {//抓取開頭代號 改變名字
         switch (name) {
-            case "吳俞恆":
-                this.Name.text = "吳俞恆"
+            case "玩家小紅":
+                this.Name.text = "小紅"
                 break;
-            case "少女":
-                this.Name.text = "少女"
+            case "元老-狼大":
+                this.Name.text = "元老-狼大"
                 break;
             case "":
                 this.Name.text = ""

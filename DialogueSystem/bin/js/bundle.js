@@ -93,23 +93,23 @@
             super();
         }
         readFace(face) {
-            if (face[DiaLab.instance.chaNum] == "吳俞恆") {
+            if (face[DiaLab.instance.chaNum] == "元老-狼大") {
                 switch (face[DiaLab.instance.faceNum]) {
                     case "大哭":
-                        DiaLab.instance.Face.skin = "face/Zh/Zh_a1003.png";
+                        DiaLab.instance.Face.skin = "face1/3-1.png";
                         break;
                     case "大笑":
-                        DiaLab.instance.Face.skin = "face/Zh/Zh_a1005.png";
+                        DiaLab.instance.Face.skin = "face1/3-1.png";
                         break;
                 }
             }
-            else if (face[DiaLab.instance.chaNum] == "少女") {
+            else if (face[DiaLab.instance.chaNum] == "玩家小紅") {
                 switch (face[DiaLab.instance.faceNum]) {
                     case "大哭":
-                        DiaLab.instance.Face.skin = "face/Gu/Gu_a1003.png";
+                        DiaLab.instance.Face.skin = "face1/2-1.png";
                         break;
                     case "大笑":
-                        DiaLab.instance.Face.skin = "face/Gu/Gu_a1005.png";
+                        DiaLab.instance.Face.skin = "face1/2-1.png";
                         break;
                 }
             }
@@ -222,11 +222,11 @@
         }
         nameCase(name) {
             switch (name) {
-                case "吳俞恆":
-                    this.Name.text = "吳俞恆";
+                case "玩家小紅":
+                    this.Name.text = "小紅";
                     break;
-                case "少女":
-                    this.Name.text = "少女";
+                case "元老-狼大":
+                    this.Name.text = "元老-狼大";
                     break;
                 case "":
                     this.Name.text = "";

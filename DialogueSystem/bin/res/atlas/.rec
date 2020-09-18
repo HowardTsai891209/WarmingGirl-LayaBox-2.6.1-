@@ -74,8 +74,16 @@ P 7679EA1C 按鈕(未選).png
 P 4ACBF694 按鈕(未選)_修正.png
 P BE52FE1B 按鈕(選擇).png
 D face
+D face1
+P 5CD20ED6 1.png
+P A06C3B7D 2-1.png
+R 00DF670F 2.png
+P 6947C42F 3-1.png
+R AB3EE0D2 3.png
+R 522AF411 4.png
+R 778F113D charcter.png
 D res
-R 3BCA0E87 test.csv
+R 2A5543BE test.csv
 R EA99E5FB test.xlsx
 D face/Ch
 S D1200DE8 Ch_a1001.png

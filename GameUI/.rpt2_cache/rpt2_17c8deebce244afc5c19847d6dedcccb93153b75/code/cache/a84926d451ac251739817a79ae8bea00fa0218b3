@@ -1,0 +1,6 @@
+{
+  "code": "import HealthBar from \"./HealthBar\";\r\nexport default class GameUI extends Laya.Scene {\r\n    constructor() {\r\n        super();\r\n        this.preload = false;\r\n        GameUI.instance = this;\r\n    }\r\n    createChildren() {\r\n        super.createChildren();\r\n        this.loadScene(\"GameUI\");\r\n    }\r\n    loadHealth() {\r\n        this.healthArr = [GameUI.instance.health0,\r\n            GameUI.instance.health1,\r\n            GameUI.instance.health2,\r\n            GameUI.instance.health3,\r\n            GameUI.instance.health4,\r\n            GameUI.instance.health5,\r\n            GameUI.instance.health6,\r\n            GameUI.instance.health7,\r\n            GameUI.instance.health8,\r\n            GameUI.instance.health9,];\r\n        this.preload = true;\r\n    }\r\n    onAwake() {\r\n        this.loadHealth();\r\n        this._health = this.getComponent(HealthBar);\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/HealthBar.ts"
+  ]
+}

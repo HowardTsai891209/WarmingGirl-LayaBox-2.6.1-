@@ -1,0 +1,6 @@
+{
+  "code": "import GameUI from \"./GameUI\";\r\nexport default class HealthBar extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n        this.playerHealth = 100;\r\n    }\r\n    playerHP(damage) {\r\n        GameUI.instance.currentHP.text = this.playerHealth.toString();\r\n        this.showHealth();\r\n    }\r\n    showHealth() {\r\n        if (!GameUI.instance.preload)\r\n            return;\r\n        this.arrEnd = parseInt((this.playerHealth / 10).toString());\r\n        if (this.playerHealth <= 0) {\r\n            console.log(\"死亡\");\r\n            this.playerHealth = 0;\r\n            GameUI.instance.healthArr[0].visible = false;\r\n            return;\r\n        }\r\n        for (this.arrStart = 0; this.arrStart < this.arrEnd; this.arrStart++) {\r\n            GameUI.instance.healthArr[this.arrStart].visible = true;\r\n        }\r\n        for (this.arrStart = 9; this.arrStart > this.arrEnd; this.arrStart--) {\r\n            GameUI.instance.healthArr[this.arrStart].visible = false;\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/GameUI.ts"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "code": "import GameUI from \"./GameUI\";\r\nexport default class PlayerAttack extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n        this.timeBetweenAtk = 0.15;\r\n        this.timerAtk = 0;\r\n    }\r\n    onEnable() {\r\n        GameUI.instance.attackBtn.on(Laya.Event.CLICK, this, this.attackFn);\r\n    }\r\n    onUpdate() {\r\n        this.timerAtk += 0.01;\r\n        console.log(this.timerAtk);\r\n    }\r\n    attackFn() {\r\n        console.log(\"Bang\");\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/GameUI.ts"
+  ]
+}

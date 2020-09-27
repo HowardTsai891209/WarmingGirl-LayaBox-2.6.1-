@@ -4,27 +4,93 @@
     class HealthBar extends Laya.Script {
         constructor() {
             super();
+            this.playerHealth = 100;
         }
-        test(target, damage) {
-            Laya.timer.loop(1000, this, function () {
-                console.log(target.value);
-                target.value -= damage;
-            });
+        playerHP(damage) {
+            GameUI.instance.currentHP.text = this.playerHealth.toString();
+            this.showHealth();
+        }
+        showHealth() {
+            if (!GameUI.instance.preload)
+                return;
+            this.arrEnd = parseInt((this.playerHealth / 10).toString());
+            if (this.playerHealth <= 0) {
+                console.log("死亡");
+                this.playerHealth = 0;
+                GameUI.instance.healthArr[0].visible = false;
+                return;
+            }
+            for (this.arrStart = 0; this.arrStart < this.arrEnd; this.arrStart++) {
+                GameUI.instance.healthArr[this.arrStart].visible = true;
+            }
+            for (this.arrStart = 9; this.arrStart > this.arrEnd; this.arrStart--) {
+                GameUI.instance.healthArr[this.arrStart].visible = false;
+            }
+        }
+    }
+
+    class Timer extends Laya.Script {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.second = 5;
+            this.minute = 0;
+        }
+        timer() {
+            Laya.timer.loop(1000, this, this.count);
+        }
+        count() {
+            this.second -= 1;
+            if (this.second < 10) {
+                GameUI.instance.minute.text = "0" + this.minute.toString();
+                GameUI.instance.second.text = "0" + this.second.toString();
+                if (this.second < 0) {
+                    this.second = 59;
+                    this.minute -= 1;
+                    GameUI.instance.minute.text = "0" + this.minute.toString();
+                    GameUI.instance.second.text = this.second.toString();
+                }
+            }
+            else if (this.second >= 10) {
+                GameUI.instance.minute.text = "0" + this.minute.toString();
+                GameUI.instance.second.text = this.second.toString();
+            }
+            if (this.second <= 0 && this.minute <= 0) {
+                console.log("time");
+                Laya.timer.clear(this, this.count);
+            }
         }
     }
 
     class GameUI extends Laya.Scene {
         constructor() {
             super();
+            this.preload = false;
             GameUI.instance = this;
         }
         createChildren() {
             super.createChildren();
-            this.loadScene("UI");
+            this.loadScene("GameUI");
+        }
+        loadHealth() {
+            this.healthArr = [GameUI.instance.health0,
+                GameUI.instance.health1,
+                GameUI.instance.health2,
+                GameUI.instance.health3,
+                GameUI.instance.health4,
+                GameUI.instance.health5,
+                GameUI.instance.health6,
+                GameUI.instance.health7,
+                GameUI.instance.health8,
+                GameUI.instance.health9,];
+            this.preload = true;
         }
         onAwake() {
+            this.loadHealth();
             this._health = this.getComponent(HealthBar);
-            this._health.test(this.HealthUI, 10);
+            this._time = this.getComponent(Timer);
+            this._time.timer();
         }
     }
 
@@ -35,6 +101,7 @@
             var reg = Laya.ClassUtils.regClass;
             reg("Scripts/GameUI.ts", GameUI);
             reg("Scripts/HealthBar.ts", HealthBar);
+            reg("Scripts/Timer.ts", Timer);
         }
     }
     GameConfig.width = 1920;

@@ -1,0 +1,6 @@
+{
+  "code": "import GameUI from \"./GameUI\";\r\nexport default class Timer extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        this.second = 5;\r\n        this.minute = 0;\r\n    }\r\n    timer() {\r\n        Laya.timer.loop(1000, this, this.count);\r\n    }\r\n    count() {\r\n        this.second -= 1;\r\n        if (this.second < 10) {\r\n            GameUI.instance.minute.text = \"0\" + this.minute.toString();\r\n            GameUI.instance.second.text = \"0\" + this.second.toString();\r\n            if (this.second < 0) {\r\n                this.second = 59;\r\n                this.minute -= 1;\r\n                GameUI.instance.minute.text = \"0\" + this.minute.toString();\r\n                GameUI.instance.second.text = this.second.toString();\r\n            }\r\n        }\r\n        else if (this.second >= 10) {\r\n            GameUI.instance.minute.text = \"0\" + this.minute.toString();\r\n            GameUI.instance.second.text = this.second.toString();\r\n        }\r\n        if (this.second <= 0 && this.minute <= 0) {\r\n            console.log(\"time\");\r\n            Laya.timer.clear(this, this.count);\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/GameUI.ts"
+  ]
+}

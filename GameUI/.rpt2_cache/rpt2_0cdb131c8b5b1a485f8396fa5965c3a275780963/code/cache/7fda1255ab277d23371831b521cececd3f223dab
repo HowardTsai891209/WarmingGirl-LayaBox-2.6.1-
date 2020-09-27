@@ -1,0 +1,8 @@
+{
+  "code": "import GameUI from \"./Scripts/GameUI\";\r\nimport HealthBar from \"./Scripts/HealthBar\";\r\nimport PlayerAttack from \"./Scripts/PlayerAttack\";\r\nexport default class GameConfig {\r\n    constructor() {\r\n    }\r\n    static init() {\r\n        var reg = Laya.ClassUtils.regClass;\r\n        reg(\"Scripts/GameUI.ts\", GameUI);\r\n        reg(\"Scripts/HealthBar.ts\", HealthBar);\r\n        reg(\"Scripts/PlayerAttack.ts\", PlayerAttack);\r\n    }\r\n}\r\nGameConfig.width = 1920;\r\nGameConfig.height = 1080;\r\nGameConfig.scaleMode = \"exactfit\";\r\nGameConfig.screenMode = \"none\";\r\nGameConfig.alignV = \"middle\";\r\nGameConfig.alignH = \"center\";\r\nGameConfig.startScene = \"GameUI.scene\";\r\nGameConfig.sceneRoot = \"\";\r\nGameConfig.debug = false;\r\nGameConfig.stat = false;\r\nGameConfig.physicsDebug = false;\r\nGameConfig.exportSceneToJson = true;\r\nGameConfig.init();\r\n",
+  "references": [
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/GameUI.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/HealthBar.ts",
+    "C:/Users/88692/Desktop/Warming_Girl/GameUI/src/Scripts/PlayerAttack.ts"
+  ]
+}

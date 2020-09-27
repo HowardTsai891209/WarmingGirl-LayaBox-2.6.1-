@@ -4,9 +4,9 @@
     "selectedBox":2,
     "selecteID":6,
     "searchKey":"Scene",
-    "props":{"width":1920,"sceneColor":"#5a5858","runtime":"Scripts/Spin.ts","height":1080},
+    "props":{"width":1920,"runtime":"Scripts/Spin.ts","height":1080},
     "nodeParent":-1,
-    "maxID":17,
+    "maxID":18,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -16,9 +16,26 @@
     "child":[
         {
             "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/Scripts/Point.ts",
+            "searchKey":"Script,Point",
+            "removeAble":true,
+            "props":{"y":0,"x":0},
+            "nodeParent":2,
+            "label":"Point",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,background",
-            "props":{"y":0,"x":0,"width":1920,"var":"background","texture":"comp/gray.png","height":1080},
+            "props":{"y":0,"x":0,"width":1920,"var":"background","texture":"comp/black.png","height":1080},
             "nodeParent":2,
             "label":"background",
             "isDirectory":false,
@@ -65,14 +82,13 @@
             "props":{"y":540,"x":960,"width":125,"visible":false,"var":"pointer","texture":"comp/06.png","pivotY":175,"pivotX":63,"height":175},
             "nodeParent":2,
             "label":"pointer",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":6,
             "child":[
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/Scripts/Point.ts",
@@ -90,23 +106,6 @@
                 }],
             "$LOCKED":false,
             "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Script",
-            "switchAble":true,
-            "source":"src/Scripts/Point.ts",
-            "searchKey":"Script,Point",
-            "removeAble":true,
-            "props":{"y":0,"x":0},
-            "nodeParent":2,
-            "label":"Point",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
         }],
     "animations":[
         {

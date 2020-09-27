@@ -7,7 +7,7 @@
         }
         decideWeapon(rotation) {
             rotation %= 360;
-            if (rotation > 330 && rotation <= 30) {
+            if (rotation > 330 || rotation <= 30) {
                 console.log(1);
                 return;
             }
@@ -19,7 +19,7 @@
                 console.log(3);
                 return;
             }
-            else if (rotation > 150 || rotation <= 210) {
+            else if (rotation > 150 && rotation <= 210) {
                 console.log(4);
                 return;
             }
@@ -29,6 +29,34 @@
             }
             else if (rotation > 270 && rotation <= 330) {
                 console.log(6);
+                return;
+            }
+        }
+        showSelect(rotation) {
+            rotation %= 360;
+            console.log(rotation);
+            if (rotation > 330 || rotation <= 30) {
+                Spin.instance.select.rotation = -120;
+                return;
+            }
+            else if (rotation > 30 && rotation <= 90) {
+                Spin.instance.select.rotation = -60;
+                return;
+            }
+            else if (rotation > 90 && rotation <= 150) {
+                Spin.instance.select.rotation = 0;
+                return;
+            }
+            else if (rotation > 150 && rotation <= 210) {
+                Spin.instance.select.rotation = 60;
+                return;
+            }
+            else if (rotation > 210 && rotation <= 270) {
+                Spin.instance.select.rotation = 120;
+                return;
+            }
+            else if (rotation > 270 && rotation <= 330) {
+                Spin.instance.select.rotation = 180;
                 return;
             }
         }
@@ -53,6 +81,7 @@
         }
         SpinFn() {
             this.pointer.rotation += this.rotateSpeed;
+            this._point.showSelect(this.pointer.rotation);
         }
         StopFn() {
             this.spinWheel.off(Laya.Event.CLICK, this, this.StopFn);

@@ -174,8 +174,6 @@
         ShowWords() {
             this.reader.read(this.chaNum);
             this.showWord = setInterval(() => {
-                if (!this.reader.preload)
-                    return;
                 this.splitted = this.story[this.line][this.word];
                 if (this.splitted == undefined)
                     return;
@@ -186,7 +184,7 @@
                     this.lineComplete = true;
                     this.comReader.showBtn();
                 }
-            }, 50);
+            }, 10);
         }
         isEnd() {
             if (this.story[this.line + this.findNext] == undefined) {

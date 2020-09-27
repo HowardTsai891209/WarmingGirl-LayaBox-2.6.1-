@@ -1,6 +1,0 @@
-{
-  "code": "import Point from \"./Point\";\r\nexport default class Spin extends Laya.Scene {\r\n    constructor() {\r\n        super();\r\n        this.rotateSpeed = 20;\r\n        Spin.instance = this;\r\n    }\r\n    createChildren() {\r\n        super.createChildren();\r\n        this.loadScene(\"WeaponSpin\");\r\n    }\r\n    onAwake() {\r\n        Laya.timer.frameLoop(1, this, this.SpinFn);\r\n        this._point = this.getComponent(Point);\r\n    }\r\n    onEnable() {\r\n        this.spinWheel.on(Laya.Event.CLICK, this, this.StopFn);\r\n    }\r\n    SpinFn() {\r\n        this.pointer.rotation += this.rotateSpeed;\r\n    }\r\n    StopFn() {\r\n        this.spinWheel.off(Laya.Event.CLICK, this, this.StopFn);\r\n        Laya.timer.loop(50, this, function () {\r\n            this.rotateSpeed *= 0.95;\r\n            if (this.rotateSpeed <= 0.1) {\r\n                Laya.timer.clear(this, this.SpinFn);\r\n                this._point.decideWeapon(this.pointer.rotation);\r\n                return;\r\n            }\r\n        });\r\n    }\r\n}\r\n",
-  "references": [
-    "C:/Users/88692/Desktop/Warming_Girl/WeaponSpin/src/Scripts/Point.ts"
-  ]
-}

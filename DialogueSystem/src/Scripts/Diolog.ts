@@ -69,7 +69,7 @@ export default class DiaLab extends Laya.Scene{
                 this.lineComplete = true;
                 this.comReader.showBtn();
             }
-        }, 50);
+        }, 10);
     }
 
     isEnd(): void {//判斷這句話是否講完 & 文本是否全部講完

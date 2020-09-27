@@ -1,3 +1,5 @@
+import Spin from "./Spin";
+
 export default class Point extends Laya.Script {
     constructor() {
         super();
@@ -5,7 +7,7 @@ export default class Point extends Laya.Script {
 
     decideWeapon(rotation: number): void {
         rotation %= 360;
-        if (rotation > 330 && rotation <= 30) {
+        if (rotation > 330 || rotation <= 30) {
             console.log(1);
             return;
         }else if (rotation > 30 && rotation <= 90) {
@@ -14,7 +16,7 @@ export default class Point extends Laya.Script {
         }else if (rotation > 90 && rotation <= 150) {
             console.log(3);
             return;
-        }else if (rotation > 150 || rotation <= 210) {
+        }else if (rotation > 150 && rotation <= 210) {
             console.log(4);
             return;
         }else if (rotation > 210 && rotation <= 270) {
@@ -22,6 +24,30 @@ export default class Point extends Laya.Script {
             return;
         }else if (rotation > 270 && rotation <= 330) {
             console.log(6);
+            return;
+        }
+    }
+
+    showSelect(rotation: number){
+        rotation %= 360;
+        console.log(rotation);
+        if (rotation > 330 || rotation <= 30) {
+            Spin.instance.select.rotation = -120;
+            return;
+        }else if (rotation > 30 && rotation <= 90) {
+            Spin.instance.select.rotation = -60;
+            return;
+        }else if (rotation > 90 && rotation <= 150) {
+            Spin.instance.select.rotation = 0;
+            return;
+        }else if (rotation > 150 && rotation <= 210) {
+            Spin.instance.select.rotation = 60;
+            return;
+        }else if (rotation > 210 && rotation <= 270) {
+            Spin.instance.select.rotation = 120;
+            return;
+        }else if (rotation > 270 && rotation <= 330) {
+            Spin.instance.select.rotation = 180;
             return;
         }
     }

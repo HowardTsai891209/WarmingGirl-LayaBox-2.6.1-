@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":12,
+    "selecteID":33,
     "searchKey":"Scene",
     "props":{"width":1920,"runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":26,
+    "maxID":35,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -84,19 +84,32 @@
         },
         {
             "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"texture":"Dialog/black.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":34,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"y":654,"x":80,"width":1753,"skin":"Dialog/Message.png","height":395},
             "nodeParent":2,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,Diolog",
                     "props":{"y":67,"x":5,"wordWrap":true,"width":1737,"var":"Diolog","padding":"80,0,0,80","height":317,"fontSize":40,"font":"Microsoft YaHei","bold":true},
@@ -110,7 +123,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,Name",
                     "props":{"y":13,"x":156,"width":279,"var":"Name","valign":"middle","height":69,"fontSize":60,"font":"Microsoft YaHei","bold":true,"align":"center"},
@@ -124,7 +136,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Face",
                     "props":{"y":-500,"x":76,"width":400,"var":"Face","height":500},
@@ -145,14 +156,13 @@
             "props":{"y":80,"x":1200,"width":700,"var":"Btn1","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":30,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"選項1","height":200},
             "nodeParent":2,
             "label":"Btn1",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":11,
             "child":[
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/Scripts/Button1.ts",
@@ -169,7 +179,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/Scripts/ButtonObject.ts",

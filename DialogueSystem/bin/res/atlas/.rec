@@ -42,37 +42,16 @@ P 7E990267 vscroll.png
 P E466EB1C vslider$bar.png
 P 2BFF7046 vslider.png
 D Dialog
-R F39A7CBC !整體效果.jpg
-P 2431B650 Audio.png
-P 5224D927 Audio接觸.png
-P 2D2AE852 Audio選.png
-P 52A42C3C Auto 選取.png
-P 81A08AA9 Auto.png
-P 0A1855CD config 選取.png
-P 20A3959C config.png
-P 261CC1D2 hide 選取.png
-P 3B109FEE hide.png
-P 14BDEDBD load(1).png
-P BF8B4983 Load.png
-P C5602CDE load接觸.png
-P 4D5CDF57 load選取.png
 R 32231412 Message.png
-P 2867D01E save 接觸.png
-P A4A5BDA7 save 選取.png
-P 8CFF6386 save.png
-P EB210D77 skip 選取.png
-P 6E57E4BB skip.png
-P CD254FF8 story 選取.png
-P 6792D7F3 story.png
+R 18607001 Rectangle 8.png
+R F39A7CBC test.jpg
 R 0FBFA472 對話框.ai
 R 1BB56E1B 對話框.psd
-P 75605522 成就 接觸.png
-P 221C4695 成就 選.png
-P E08C22D1 成就.png
 P 9E054AA6 按鈕(接觸).png
 P 7679EA1C 按鈕(未選).png
 P 4ACBF694 按鈕(未選)_修正.png
 P BE52FE1B 按鈕(選擇).png
+R CF4ABA42 黑色透明背景.png
 D face
 D face1
 P 5CD20ED6 1.png
